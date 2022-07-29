@@ -246,7 +246,7 @@ void Doxybook2::Node::finalize(const Config& config,
 
     static const auto anchorMaker = [](const Node& node) {
         if (!node.isStructured() && node.kind != Kind::MODULE) {
-            return "#" + Utils::toLower(toStr(node.kind)) + "-" + Utils::safeAnchorId(node.name);
+            return "#" + /*Utils::toLower(toStr(node.kind)) + "-" +*/ Utils::safeAnchorId(node.name);
         } else {
             return std::string("");
         }
